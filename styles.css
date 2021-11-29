@@ -1,0 +1,303 @@
+body {
+	margin: 0;
+	font-family: "Baskervville", serif;
+}
+
+.body-day-mode {
+	background-color: rgb(240 235 231 / 85%);
+	color: black;
+}
+
+.body-night-mode {
+  background-color: rgb(24, 24, 24);
+  color: rgb(240 235 231);
+}
+
+h1 {
+	font-family: "Limelight", cursive;
+}
+
+h2 {
+	font-style: italic;
+	font-size: 2rem;
+}
+
+h3 {
+	font-family: "Poiret One", cursive;
+	text-align: center;
+	font-size: 1.7rem;
+	padding-bottom: 5%;
+}
+
+p {
+	padding: 0.6%;
+}
+
+#book-text {
+	margin: 0 auto;
+	padding: 0% 14% 10% 14%;
+	margin-top: 50px;
+	font-size: 1.5rem;
+	line-height: 150%;
+	text-align: justify;
+}
+
+#chapter-header {
+	background-color: rgb(104 161 156 / 65%);
+	padding: 50px 10px;
+	text-align: center;
+	font-size: 2.2rem;
+	font-weight: bold;
+	top: 0;
+	min-width: 80%;
+	transition: 0.5s;
+}
+
+#left-border,
+#right-border {
+	display: block;
+	height: 150px;
+	width: 150px;
+	margin-top: -40px;
+}
+
+#left-border {
+	float: left;
+	border-top: 4px solid black;
+	border-left: 4px solid black;
+}
+
+#right-border {
+	float: right;
+	border-top: 4px solid black;
+	border-right: 4px solid black;
+}
+
+#left-border::before,
+#right-border::before {
+	content: "";
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+	border: 4px solid #2e6374;
+	background-color: #2e6374;
+}
+
+#left-border::before {
+	float: left;
+}
+
+#right-border::before {
+	float: right;
+}
+
+#left-border::after,
+#right-border::after {
+	content: "";
+	display: inline-block;
+	height: 30px;
+	width: 30px;
+	border: 4px solid rgb(230 108 85);
+	margin-top: 14%;
+	border-radius: 20px;
+	background-color: rgb(230 108 85);
+}
+
+#left-border::after {
+	float: left;
+	margin: -5% 0% 0% 14%;
+}
+
+#right-border::after {
+	float: right;
+	margin: -5% 14% 0% 0%;
+}
+
+#left-secondary-border,
+#right-secondary-border {
+	display: inline-block;
+	width: 115px;
+	height: 20px;
+	border-top: 2px solid black;
+	float: left;
+	margin-top: 8px;
+	margin-left: 6px;
+}
+
+#left-secondary-border::before,
+#right-secondary-border::before {
+	content: "";
+	display: inline-block;
+	width: 20px;
+	height: 115px;
+	border-left: 2px solid black;
+	margin-top: 20px;
+}
+
+#left-secondary-border::before {
+	float: left;
+	margin-left: -20px;
+}
+
+#right-secondary-border::before {
+	float: right;
+	margin-right: -40px;
+}
+
+span.opening-letter {
+	font-size: 3.5rem;
+}
+
+/* Toggle button based on/copied from W3 Schools one: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_switch */
+
+.switch {
+	position: fixed;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
+	margin-left: 1%;
+	margin-top: 1%;
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: rgb(104 161 156 / 65%);
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background: linear-gradient(-60deg, rgb(24, 24, 24) 50%, rgb(240 235 231 / 85%) 50%);
+	-webkit-transition: 0.4s;
+	transition: 0.4s;
+}
+
+input:checked + .slider {
+	background-color: rgb(31, 61, 71);
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px rgb(31, 61, 71);
+}
+
+input:checked + .slider:before {
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+	border-radius: 34px;
+}
+
+.slider.round:before {
+	border-radius: 50%;
+}
+
+@media only screen and (min-width: 429px) and (max-width: 880px) {
+	#chapter-header {
+		font-size: 2rem;
+	}
+	.book-text {
+		padding: 0% 10% 10% 10%;
+	}
+	#chapter-header {
+		font-size: 2rem;
+	}
+}
+
+@media only screen and (max-width: 428px) {
+	h2 {
+		font-size: 1.2rem;
+		padding-top: 2%;
+	}
+	h3 {
+		font-size: 1.1rem;
+		padding-bottom: 6%;
+	}
+	#book-text {
+		padding: 0% 11.5% 10% 11.5%;
+		font-size: 1.2rem;
+	}
+	#chapter-header {
+		font-size: 1.1rem;
+	}
+	#left-border,
+	#right-border {
+		height: 100px;
+		width: 100px;
+	}
+
+	#left-border::before,
+	#right-border::before {
+		height: 10px;
+		width: 10px;
+	}
+
+	#left-border::after,
+	#right-border::after {
+		height: 20px;
+		width: 20px;
+		margin-top: 14%;
+	}
+
+	#left-border::after {
+		float: left;
+		margin: -5% 0% 0% 14%;
+	}
+
+	#right-border::after {
+		float: right;
+		margin: -5% 14% 0% 0%;
+	}
+
+	#left-secondary-border,
+	#right-secondary-border {
+		width: 70px;
+		height: 12px;
+	}
+
+	#left-secondary-border::before,
+	#right-secondary-border::before {
+		width: 12px;
+		height: 70px;
+	}
+
+	#left-secondary-border::before {
+		margin-left: -17px;
+		margin-top: 15px;
+	}
+
+	#right-secondary-border::before {
+		margin-right: -29px;
+		margin-top: 13px;
+	}
+
+	.switch {
+		width: 38px;
+	}
+
+	input:checked + .slider:before {
+		-webkit-transform: translateX(4px);
+		-ms-transform: translateX(4px);
+		transform: translateX(4px);
+	}
+}
